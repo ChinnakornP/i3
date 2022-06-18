@@ -3,7 +3,7 @@
 #
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
-#
+# display-setup-script=xrandr --output "HDMI1" --mode 1920x1080 --primary --auto --output "DP1" --mode 1920x1080 --right-of "HDMI1" --output "eDP1" --mode 1920x1080 --left-of "HDMI1"
 
 # i3 config file (v4)
 #
