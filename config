@@ -204,6 +204,9 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
+# Replace polybar instead of i3status
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # Start i3blocks to display a workspace bar
 bar {
     font pango: SauceCodePro Nerd Font 9
