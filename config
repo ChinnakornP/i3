@@ -32,10 +32,13 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-# exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # https://github.com/MashMB/manjaro-i3wm/blob/master/manjaro/home/.i3/config_org#L286
-
-#exec --no-startup-id xautolock -time 10 -locker blurlock #disable
+#exec --no-startup-id xautolock -time 10 -locker blurlock #disable old
+#https://bbs.archlinux.org/viewtopic.php?id=208699
+#exec --no-startup-id xautolock -time 15 -locker blurlock 
+# -notify 60 -notifier 'i3lock | xset dpms force off'
+exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 3 'i3lock' '' --timer 30 'systemctl suspend' ''
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
