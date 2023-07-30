@@ -13,8 +13,12 @@ bat = ["|E|", "|_|", "|=|", "|F|"]
 bat_charging = "|^| "
 
 [[block]]
+block = "music"
+format = " $icon {$combo.str(max_w:20) $play $next |}"
+
+[[block]]
 block = "net"
-format = " $icon {$signal_strength $ssid $frequency|Wired connection} via $device "
+format = " $icon {$signal_strength $ssid} " #$frequency|Wired connection} via $device "
 
 [[block]]
 block = "cpu"
