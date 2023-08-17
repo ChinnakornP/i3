@@ -18,7 +18,7 @@ bat_charging = "|^| "
 
 [[block]]
 block = "net"
-format = " $icon {$signal_strength $ssid} " #$frequency|Wired connection} via $device "
+format = " $icon {$signal_strength} " #$frequency|Wired connection} via $device "
 
 [[block]]
 block = "cpu"
